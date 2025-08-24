@@ -1,0 +1,19 @@
+.conatiner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  height: 100px;
+  width: 100px;
+  font-size: 50px;
+  border-radius: 0;
+}
+.label {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
