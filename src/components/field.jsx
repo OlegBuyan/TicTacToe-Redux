@@ -1,7 +1,11 @@
 import styles from "./field.module.css";
 import { store } from "../redux";
+import { useSelector } from "react-redux";
 export const Field = ({ drawCurrentSymbol, clearField }) => {
-  const { info, isGameEnd, field } = store.getState();
+  const info = useSelector((state) => state.info);
+  const isGameEnd = useSelector((state) => state.isGameEnd);
+  const field = store.getState().field;
+
   return (
     <>
       <div className={styles.label}>{info}</div>

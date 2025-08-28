@@ -1,4 +1,8 @@
 import { appReducer, initialState } from "./reducer";
 import { legacy_createStore } from "redux";
 
-export const store = legacy_createStore(appReducer, initialState);
+export const store = legacy_createStore(
+  appReducer,
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
